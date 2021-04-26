@@ -1,0 +1,16 @@
+name: Immediately close all opened pull requests.
+
+on:
+  pull_request: {}
+
+jobs:
+  lockdown:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repo Lockdown
+      uses: dessant/repo-lockdown@v2.0.0
+      with:
+        # GitHub access token
+        github-token: ${{ secrets.GITHUB_TOKEN }}
