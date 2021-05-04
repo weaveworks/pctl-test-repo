@@ -1,0 +1,9 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileSubscription
+metadata:
+  creationTimestamp: null
+  name: pctl-profile
+  namespace: default
+spec:
+  branch: prtest_1375db
+status: {}
