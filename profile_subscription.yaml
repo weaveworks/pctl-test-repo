@@ -1,0 +1,10 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileSubscription
+metadata:
+  creationTimestamp: null
+  name: pctl-profile
+  namespace: default
+spec:
+  branch: prtest_4f3d4a
+  profileURL: https://github.com/weaveworks/profiles-example
+status: {}
