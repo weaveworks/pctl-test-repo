@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-weaveworks-nginx-nginx-deployment
+  namespace: default
+spec:
+  interval: 5m0s
+  path: /tmp/pctl_test_install_generate_branch_01253243108/repo/weaveworks-nginx/artifacts/nginx-deployment/nginx/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: git-repo-name
+    namespace: 21ec0fb8-f29f-41b6-94ad-82a84c8c65a1
+  targetNamespace: default
+status: {}
