@@ -1,0 +1,21 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-weaveworks-nginx-nginx-chart
+  namespace: default
+spec:
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: pctl-profile-weaveworks-nginx-nginx-chart
+    namespace: default
+  interval: 5m0s
+  path: /tmp/pctl_test_install_generate_branch_01772654044/repo/weaveworks-nginx/artifacts/nginx-chart/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: git-repo-name
+    namespace: af5ccea5-b10f-4d65-a969-10f2d89211f0
+  targetNamespace: default
+status: {}
