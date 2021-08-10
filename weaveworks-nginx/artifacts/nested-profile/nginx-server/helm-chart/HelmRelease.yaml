@@ -5,7 +5,7 @@ metadata:
   name: jake-rocks-nginx-server
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
-  releaseName: foo
+  releaseName: ""
   chart:
     spec:
       chart: weaveworks-nginx/artifacts/nested-profile/nginx-server/helm-chart/nginx/chart
