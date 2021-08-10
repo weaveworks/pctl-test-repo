@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   creationTimestamp: null
-  name: bar
+  name: bbarbarbarbarbarbarar
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
   chart:
