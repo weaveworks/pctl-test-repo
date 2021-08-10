@@ -2,14 +2,13 @@ apiVersion: weave.works/v1alpha1
 kind: ProfileInstallation
 metadata:
   creationTimestamp: null
-  name: e2e
+  name: jake-rocks
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
   catalog:
     catalog: nginx-catalog
     profile: weaveworks-nginx
     version: v0.1.1
-  configMap: e2e-values
   gitRepository:
     name: pctl-repo
     namespace: 7994947f-7699-4412-aebd-761c8524cb72

@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   creationTimestamp: null
-  name: e2e-nginx-chart
+  name: jake-rocks-nginx-chart
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
   interval: 0s

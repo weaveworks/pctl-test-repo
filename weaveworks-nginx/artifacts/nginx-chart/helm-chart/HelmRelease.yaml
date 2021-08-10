@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   creationTimestamp: null
-  name: e2e-nginx-chart
+  name: jake-rocks-nginx-chart
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
   chart:
@@ -10,15 +10,12 @@ spec:
       chart: nginx
       sourceRef:
         kind: HelmRepository
-        name: e2e-nginx-chart
+        name: jake-rocks-nginx-chart
         namespace: 7994947f-7699-4412-aebd-761c8524cb72
       version: 9.3.0
   interval: 0s
   valuesFrom:
   - kind: ConfigMap
-    name: e2e-nginx-chart-defaultvalues
+    name: jake-rocks-nginx-chart-defaultvalues
     valuesKey: default-values.yaml
-  - kind: ConfigMap
-    name: e2e-values
-    valuesKey: nginx-chart
 status: {}
