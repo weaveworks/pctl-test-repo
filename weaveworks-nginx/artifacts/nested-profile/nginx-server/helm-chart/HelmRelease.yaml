@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: e2e-nginx-server
+  namespace: cecee221-7837-42f3-b96c-607feb156f88
+spec:
+  chart:
+    spec:
+      chart: weaveworks-nginx/artifacts/nested-profile/nginx-server/helm-chart/nginx/chart
+      sourceRef:
+        kind: GitRepository
+        name: pctl-repo
+        namespace: cecee221-7837-42f3-b96c-607feb156f88
+  interval: 0s
+  valuesFrom:
+  - kind: ConfigMap
+    name: e2e-values
+    valuesKey: nginx-server
+status: {}
