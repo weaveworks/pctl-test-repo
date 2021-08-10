@@ -8,13 +8,13 @@ spec:
   catalog:
     catalog: nginx-catalog
     profile: weaveworks-nginx
-    version: v0.1.0
+    version: v0.1.1
   configMap: e2e-values
   gitRepository:
     name: pctl-repo
     namespace: cecee221-7837-42f3-b96c-607feb156f88
   source:
     path: weaveworks-nginx
-    tag: weaveworks-nginx/v0.1.0
+    tag: weaveworks-nginx/v0.1.1
     url: https://github.com/weaveworks/profiles-examples
 status: {}
