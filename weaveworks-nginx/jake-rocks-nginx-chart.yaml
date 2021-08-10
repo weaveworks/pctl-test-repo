@@ -2,16 +2,20 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   creationTimestamp: null
-  name: jake-rocks-nginx-server
+  name: jake-rocks-nginx-chart
   namespace: 7994947f-7699-4412-aebd-761c8524cb72
 spec:
-  releaseName: "f"
   chart:
     spec:
-      chart: weaveworks-nginx/artifacts/nested-profile/nginx-server/helm-chart/nginx/chart
+      chart: nginx
       sourceRef:
-        kind: GitRepository
-        name: pctl-repo
+        kind: HelmRepository
+        name: jake-rocks-nginx-chart
         namespace: 7994947f-7699-4412-aebd-761c8524cb72
+      version: 9.3.0
   interval: 0s
+  valuesFrom:
+  - kind: ConfigMap
+    name: jake-rocks-nginx-chart-defaultvalues
+    valuesKey: default-values.yaml
 status: {}
