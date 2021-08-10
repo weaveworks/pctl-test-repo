@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    service:
+      type: ClusterIP
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-chart-defaultvalues
+  namespace: default
