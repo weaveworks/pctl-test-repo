@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  default-values.yaml: '"master:\n  persistence:\n    enabled: false\nreplica:\n  replicaCount:
+    0\n"'
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: pprof-dependon-chart-defaultvalues
+  namespace: a0970039-4b87-4cc1-978c-b7bb91fd8079

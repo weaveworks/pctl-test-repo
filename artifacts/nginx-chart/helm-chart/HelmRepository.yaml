@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: pprof-profiles-examples-nginx
+  namespace: a0970039-4b87-4cc1-978c-b7bb91fd8079
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}
