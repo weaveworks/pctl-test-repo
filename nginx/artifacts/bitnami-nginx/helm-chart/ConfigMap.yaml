@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    replicaCount: 3
+    service:
+      type: ClusterIP
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-bitnami-nginx-defaultvalues
+  namespace: 91138693-135e-49ed-a8da-fb2d01896452
