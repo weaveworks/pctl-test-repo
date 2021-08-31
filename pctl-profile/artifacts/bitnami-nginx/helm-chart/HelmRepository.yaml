@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-bitnami-nginx
+  namespace: 22b9886d-70bc-419c-b3bd-25552b8640e2
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}
