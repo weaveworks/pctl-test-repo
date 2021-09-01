@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-deployment
+  namespace: default
+spec:
+  interval: 5m0s
+  path: /tmp/pctl_tmp882125644/repo/pctl-profile/artifacts/nginx-deployment/nginx/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: git-repo-name
+    namespace: c956ec38-2f3b-4c00-b089-2ea02af56c44
+  targetNamespace: default
+status: {}
