@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-server
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: /var/folders/gh/m47qw8n917n9gym8n_7ttlsc0000gn/T/pctl_tmp1305639614/repo/pctl-profile/artifacts/nested-profile/nginx-server/helm-chart/nginx/chart
+      sourceRef:
+        kind: GitRepository
+        name: git-repo-name
+        namespace: 5690e4aa-297d-4a1c-b9d9-4b140c497d6d
+  interval: 0s
+  releaseName: nginx-server
+status: {}
