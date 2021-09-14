@@ -1,0 +1,19 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: pctl-profile
+  namespace: default
+spec:
+  catalog:
+    catalog: nginx-catalog
+    profile: weaveworks-nginx
+    version: v0.1.0
+  gitRepository:
+    name: git-repo-name
+    namespace: 024d7450-6951-4d73-8f50-f240b19bfcb8
+  source:
+    path: weaveworks-nginx
+    tag: weaveworks-nginx/v0.1.0
+    url: https://github.com/weaveworks/profiles-examples
+status: {}
