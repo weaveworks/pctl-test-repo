@@ -1,0 +1,15 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: contour
+  namespace: default
+spec:
+  gitRepository:
+    name: flux-system
+    namespace: flux-system
+  source:
+    branch: main
+    path: ./contour
+    url: https://github.com/weaveworks/profiles-catalog.git
+status: {}
