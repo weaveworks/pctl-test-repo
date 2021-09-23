@@ -1,0 +1,21 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: kivo-profile-bitnami-nginx
+  namespace: 86e1160b-206b-4135-9a2f-eef885bab3da
+spec:
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: kivo-profile-bitnami-nginx
+    namespace: 86e1160b-206b-4135-9a2f-eef885bab3da
+  interval: 5m0s
+  path: kivo-profile/artifacts/bitnami-nginx/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: kivo-repo
+    namespace: 86e1160b-206b-4135-9a2f-eef885bab3da
+  targetNamespace: 86e1160b-206b-4135-9a2f-eef885bab3da
+status: {}

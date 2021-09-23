@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    replicaCount: 3
+    service:
+      type: ClusterIP
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: kivo-profile-bitnami-nginx-defaultvalues
+  namespace: 86e1160b-206b-4135-9a2f-eef885bab3da
