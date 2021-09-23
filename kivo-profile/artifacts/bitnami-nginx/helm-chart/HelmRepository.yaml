@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: kivo-profile-bitnami-nginx
+  namespace: 24407922-379f-4c44-b6a9-94f4e2fec36f
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}

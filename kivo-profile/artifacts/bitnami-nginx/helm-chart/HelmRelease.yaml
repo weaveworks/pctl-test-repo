@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: kivo-profile-bitnami-nginx
+  namespace: 24407922-379f-4c44-b6a9-94f4e2fec36f
+spec:
+  chart:
+    spec:
+      chart: nginx
+      sourceRef:
+        kind: HelmRepository
+        name: kivo-profile-bitnami-nginx
+        namespace: 24407922-379f-4c44-b6a9-94f4e2fec36f
+      version: 8.9.1
+  interval: 5m0s
+  releaseName: bitnami-nginx
+  valuesFrom:
+  - kind: ConfigMap
+    name: kivo-profile-bitnami-nginx-defaultvalues
+    valuesKey: default-values.yaml
+status: {}
