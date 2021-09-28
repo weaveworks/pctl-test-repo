@@ -1,0 +1,19 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: kivo-profile
+  namespace: 4dddb5f3-d192-4abb-b516-698b07e4fa63
+spec:
+  catalog:
+    catalog: nginx-catalog
+    profile: nginx
+    version: v2.0.1
+  gitRepository:
+    name: kivo-repo
+    namespace: 4dddb5f3-d192-4abb-b516-698b07e4fa63
+  source:
+    path: .
+    tag: v2.0.1
+    url: https://github.com/weaveworks/nginx-profile
+status: {}
