@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    master:
+      persistence:
+        enabled: false
+    replica:
+      replicaCount: 0
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: -dependon-chart-defaultvalues

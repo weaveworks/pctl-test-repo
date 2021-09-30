@@ -1,0 +1,22 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: -dependon-chart
+spec:
+  dependsOn:
+  - name: -nginx-deployment
+  - name: -nginx-chart
+  - name: -nginx-server
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: -dependon-chart
+  interval: 5m0s
+  path: /tmp/profile-upgrade1216973056/artifacts/dependon-chart/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pctl-repo
+    namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+status: {}
