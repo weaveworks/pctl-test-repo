@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: -dependon-chart
+spec:
+  chart:
+    spec:
+      chart: redis
+      sourceRef:
+        kind: HelmRepository
+        name: -dependon-chart
+      version: 14.6.1
+  interval: 5m0s
+  releaseName: dependon-chart
+  valuesFrom:
+  - kind: ConfigMap
+    name: -dependon-chart-defaultvalues
+    valuesKey: default-values.yaml
+  - kind: ConfigMap
+    name: e2e-values
+    valuesKey: dependon-chart
+status: {}

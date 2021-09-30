@@ -16,6 +16,9 @@ spec:
   releaseName: nginx-server
   valuesFrom:
   - kind: ConfigMap
+    name: -nginx-server-defaultvalues
+    valuesKey: default-values.yaml
+  - kind: ConfigMap
     name: e2e-values
     valuesKey: nginx-server
 status: {}
