@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    service:
+      type: ClusterIP
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: e2e-nginx-chart-defaultvalues
+  namespace: 8bb7b225-4cbb-45d8-b4cf-5ab958eea25b
