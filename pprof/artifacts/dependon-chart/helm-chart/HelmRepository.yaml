@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: pprof-dependon-chart
+  namespace: 6283a856-3b43-444a-b98e-23416383ba81
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}

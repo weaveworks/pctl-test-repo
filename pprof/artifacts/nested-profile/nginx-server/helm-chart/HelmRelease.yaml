@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pprof-nginx-server
+  namespace: 6283a856-3b43-444a-b98e-23416383ba81
+spec:
+  chart:
+    spec:
+      chart: pprof/artifacts/nested-profile/nginx-server/helm-chart/nginx/chart
+      sourceRef:
+        kind: GitRepository
+        name: pctl-repo
+        namespace: 6283a856-3b43-444a-b98e-23416383ba81
+  interval: 5m0s
+  releaseName: nginx-server
+  valuesFrom:
+  - kind: ConfigMap
+    name: pprof-nginx-server-defaultvalues
+    valuesKey: default-values.yaml
+  - kind: ConfigMap
+    name: pprof-values
+    valuesKey: nginx-server
+status: {}

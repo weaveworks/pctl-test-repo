@@ -1,0 +1,16 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: pprof
+  namespace: 6283a856-3b43-444a-b98e-23416383ba81
+spec:
+  configMap: pprof-values
+  gitRepository:
+    name: pctl-repo
+    namespace: 6283a856-3b43-444a-b98e-23416383ba81
+  source:
+    branch: main
+    path: weaveworks-nginx
+    url: https://github.com/weaveworks/profiles-examples
+status: {}

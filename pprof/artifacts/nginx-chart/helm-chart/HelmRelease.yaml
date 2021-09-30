@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pprof-nginx-chart
+  namespace: 6283a856-3b43-444a-b98e-23416383ba81
+spec:
+  chart:
+    spec:
+      chart: nginx
+      sourceRef:
+        kind: HelmRepository
+        name: pprof-nginx-chart
+        namespace: 6283a856-3b43-444a-b98e-23416383ba81
+      version: 9.3.0
+  interval: 5m0s
+  releaseName: nginx-chart
+  valuesFrom:
+  - kind: ConfigMap
+    name: pprof-nginx-chart-defaultvalues
+    valuesKey: default-values.yaml
+  - kind: ConfigMap
+    name: pprof-values
+    valuesKey: nginx-chart
+status: {}
