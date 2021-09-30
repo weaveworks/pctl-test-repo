@@ -1,0 +1,21 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: e2e-nginx-server
+  namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+spec:
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: e2e-nginx-server
+    namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+  interval: 5m0s
+  path: out/e2e/artifacts/nested-profile/nginx-server/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pctl-repo
+    namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+  targetNamespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+status: {}

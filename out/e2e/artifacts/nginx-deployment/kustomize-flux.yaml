@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: e2e-nginx-deployment
+  namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+spec:
+  interval: 5m0s
+  path: out/e2e/artifacts/nginx-deployment/nginx/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pctl-repo
+    namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+  targetNamespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+status: {}

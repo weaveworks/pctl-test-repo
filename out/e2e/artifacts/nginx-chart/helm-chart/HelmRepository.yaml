@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: e2e-nginx-chart
+  namespace: 9cbf99e1-4a56-4653-9241-3fdc2cc114e0
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}
