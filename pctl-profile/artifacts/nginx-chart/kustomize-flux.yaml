@@ -1,0 +1,21 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-chart
+  namespace: default
+spec:
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: pctl-profile-nginx-chart
+    namespace: default
+  interval: 5m0s
+  path: /tmp/pctl_tmp2722865629/repo/pctl-profile/artifacts/nginx-chart/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: git-repo-name
+    namespace: 032bca9a-337c-43c8-a4a9-36fdd9750378
+  targetNamespace: default
+status: {}
