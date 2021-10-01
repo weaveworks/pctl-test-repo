@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-bitnami-nginx
+  namespace: 1e8c196a-8524-49f5-8872-b5f1c1d12f12
+spec:
+  chart:
+    spec:
+      chart: nginx
+      sourceRef:
+        kind: HelmRepository
+        name: pctl-profile-bitnami-nginx
+        namespace: 1e8c196a-8524-49f5-8872-b5f1c1d12f12
+      version: 8.9.1
+  interval: 5m0s
+  releaseName: bitnami-nginx
+  valuesFrom:
+  - kind: ConfigMap
+    name: pctl-profile-bitnami-nginx-defaultvalues
+    valuesKey: default-values.yaml
+status: {}
